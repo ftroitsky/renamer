@@ -12,8 +12,8 @@ const rn = require('rename')
 const path = require('path')
 const junk = require('junk')
 
-const filesA = fs.readdirSync(folderA).filter(junk.not)
-const filesB = fs.readdirSync(folderB).filter(junk.not)
+let filesA = []
+let filesB = []
 
 function run (A, B) {
   if (validate(A, B)) {
@@ -41,4 +41,15 @@ function rename (source, target) {
   })
 }
 
-run(filesA, filesB)
+function init () {
+  if (!filesA || !filesB || !extA ) {
+    const err = new Error('Usage is: renamer ./source ./target .source_ext')
+    return console.error('\x1b[31m', err.message, '\x1b[0m')
+  }
+
+  filesA = fs.readdirSync(folderA).filter(junk.not)
+  filesB = fs.readdirSync(folderB).filter(junk.not)
+
+  run(filesA, filesB)
+}
+init()
