@@ -1,3 +1,4 @@
+#! /usr/bin/env node --harmony
  // 1. Input dir.A & dir.B
  // 2. Read A and B into 2 arrays
  // 3. Indexes count should match

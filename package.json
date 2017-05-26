@@ -1,6 +1,6 @@
 {
   "name": "renamer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Utility for renaming files in target folder with the names of source folder",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "preferGlobal": true,
   "bin": {
-    "filesearch": "index.js"
+    "renamer": "index.js"
   },
   "author": "Fedor Troitsky",
   "license": "ISC",
