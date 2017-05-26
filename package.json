@@ -1,6 +1,6 @@
 {
   "name": "renamer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility for renaming files in target folder with the names of source folder",
   "main": "index.js",
   "scripts": {
